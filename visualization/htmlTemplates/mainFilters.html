@@ -1,0 +1,67 @@
+{{define "Filters"}}
+<div class="col-md-9 content">
+    <div class="row">
+      <!-- Filters -->
+      <form name="filterForm" id="filterForm" action="/" method="post">
+        <div class="col-md-3 col-lg-3">
+          <!-- Creation date filter -->
+          <div class="row">
+            <h4>Creation Date Filter</h4>
+            <div class="col-md-6">
+              <label for="minYear">From Year:</label>
+              <input type="range" id="minYear" name="minYear" min={{.MinCreationDate}} max={{.MaxCreationDate}} step="1" value={{.MinCreationDate}}>
+              <p><output for="minYear" id="minYearValue">{{.MinCreationDate}}</output></p>
+            </div>
+            <div class="col-md-6">
+              <label for="maxYear">Till Year:</label>
+              <input type="range" id="maxYear" name="maxYear" min={{.MinCreationDate}} max={{.MaxCreationDate}} step="1" value={{.MaxCreationDate}}>
+              <p><output for="maxYear" id="maxYearValue">{{.MaxCreationDate}}</output></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-lg-3">
+          <!-- First Album Date Filter -->
+          <div class="row">
+            <h4>First Album Date Filter</h4>
+            <div class="col-md-6">
+              <label for="minYearAlbum">From Year:</label>
+              <input type="range" id="minYearAlbum" name="minYearAlbum" min={{.MinYearAlbum}} max={{.MaxYearAlbum}} step="1" value={{.MinYearAlbum}}>
+              <p><output for="minYearAlbum" id="minYearAlbumValue">{{.MinYearAlbum}}</output></p>
+            </div>
+            <div class="col-md-6">
+              <label for="maxYearAlbum">Till Year:</label>
+              <input type="range" id="maxYearAlbum" name="maxYearAlbum" min={{.MinYearAlbum}} max={{.MaxYearAlbum}} step="1" value={{.MaxYearAlbum}}>
+              <p><output for="maxYearAlbum" id="maxYearAlbumValue">{{.MaxYearAlbum}}</output></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 col-lg-3">
+            <!-- Filter by Members -->
+            <h4>Filter by Members</h4>
+            <label>Select Member Count:</label>
+            <input type="checkbox" id="memberCount0" name="memberCount[]" value="0" checked>
+            <label for="memberCount0">ANY</label>
+
+            {{range $i := .MaxMemberOption}}
+            <input type="checkbox" id="memberCount{{$i}}" name="memberCount[]" value="{{$i}}">
+            <label for="memberCount{{$i}}">{{$i}}</label>
+            {{end}}
+          </div>
+        </div>
+
+        <div class="col-md-3 col-lg-3">
+          <!-- Select Location -->
+          <h4>Select Concert Location</h4>
+          <select id="location" name="location">
+            {{range $i := .ListOfLocs}}
+            <option value="{{$i}}"{{if eq . $.SelectedLoc}} selected{{end}}>{{$i}}</option>
+            {{end}}
+          </select>
+        </div>
+      </div>
+      <button name="submit" type="submit" value="filter">Apply Filter</button>
+    </form>
+{{end}}

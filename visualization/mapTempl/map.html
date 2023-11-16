@@ -1,0 +1,21 @@
+{{ define "Maps" }}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Maps API Test</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8uUxTzwPUKcGoJWvGkXQXoYVscpFFMm0"></script>
+    <style>
+        html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+    </style>
+</head>
+<body>
+    <div id="map" style="height: 100%; width: 100%;"></div>
+    
+    {{template "MapScript" .}}
+</body>
+</html>
+{{ end }}

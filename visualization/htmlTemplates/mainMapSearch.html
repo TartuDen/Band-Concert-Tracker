@@ -1,0 +1,11 @@
+{{define "mapSearch"}}
+<form name="filterForm" id="filterForm" action="/" method="post">
+    <input type="text" id="query" name="query" placeholder="Search...">
+    <input type="submit" value="Search">
+  </form>
+  <form action="/map" name="mapLink" id="mapLink" method="post">
+      <a href="#" onclick="submitForm()">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyYuWsisYShM2GWOoUA4_LorS7w26GZk7zGxz7q3V0ThhZxaq08xRBcNOGwKmEpN7CnM4&usqp=CAU" style="width: 5%; height: auto;">
+      </a>
+  </form>
+{{end}}

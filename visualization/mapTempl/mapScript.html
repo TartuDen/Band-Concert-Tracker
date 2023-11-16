@@ -1,0 +1,58 @@
+{{define "MapScript"}}
+<script>
+    var CONCERT_LOCATIONS = {{ .ConcertData }};
+    var INITIAL_LOCATIONS = {{ .InitialLoc }};
+
+    function initMap() {
+        if (!CONCERT_LOCATIONS) {
+            // Create a map with an initial center
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 0, lng: 0 },
+                zoom: 3
+            });
+
+            // Check and update the map's center with your current position
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var currentLat = position.coords.latitude;
+                    var currentLng = position.coords.longitude;
+                    var currentCenter = { lat: currentLat, lng: currentLng };
+
+                    // Set the map's center to your current position
+                    map.setCenter(currentCenter);
+                }, function() {
+                    // Handle geolocation error if needed
+                    console.error('Error getting current position');
+                });
+            } else {
+                // Browser doesn't support geolocation
+                console.error('Geolocation is not supported by your browser');
+            }
+        } else {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: INITIAL_LOCATIONS[0][0], lng: INITIAL_LOCATIONS[0][1] },
+                zoom: 3
+            });
+        }
+
+        // Add markers for each concert location.
+        for (var artistName in CONCERT_LOCATIONS) {
+            if (CONCERT_LOCATIONS.hasOwnProperty(artistName)) {
+                var coordinatesArray = CONCERT_LOCATIONS[artistName];
+
+                for (var i = 0; i < coordinatesArray.length; i++) {
+                    var location = coordinatesArray[i];
+                    var marker = new google.maps.Marker({
+                        position: { lat: location[0], lng: location[1] },
+                        map: map,
+                        title: artistName
+                    });
+                }
+            }
+        }
+    }
+
+    // Call the initMap function when the Google Maps API is loaded.
+    google.maps.event.addDomListener(window, 'load', initMap);
+</script>
+{{end}}

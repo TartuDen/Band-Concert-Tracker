@@ -1,0 +1,79 @@
+{{define "Template"}}
+<style>
+    /* Custom CSS class for background image */
+    .bg-image {
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      height: 100vh;
+      width: 100wH;
+    }
+
+    /* Customize your CSS here */
+    body {
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          height: 100vh;
+          width: 100wH;
+
+      }
+      /* Style the left sidebar */
+      .sidebar {
+          background-color: #333;
+          color: #fff;
+          padding: 20px;
+          min-height: 100vh;
+      }
+
+      /* Style the central content area */
+      .content {
+          padding: 20px;
+      }
+      .band-image {
+          width: 150px; /* Adjust as needed */
+          height: 150px; /* Adjust as needed */
+          background-color: #f0f0f0; /* Placeholder background color */
+          margin: 10px;
+          /* Add more styling as needed */
+      }
+      .hover {
+          /* Set the initial text color */
+          color: #8d8d8d; 
+      }
+      .hover:hover {
+          /* Set the hover text color to dark grey */
+          color: #bcbcbc; 
+      }
+
+      body {
+        font-family: 'Metal Mania', sansa-serif;
+      }
+      .with-vertical-space {
+        margin-bottom: 100px; /* Adjust the value to set the desired vertical spacing */
+      }
+      .shimmer-text {
+        font-size: 36px;
+        text-align: center;
+        background-image: linear-gradient(to right, rgb(32, 30, 31), rgb(136, 37, 37), rgb(22, 20, 21)); /* Define the shimmering colors here */
+        background-size: 200% auto;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: shimmer 10s linear infinite; /* Adjust the animation duration as needed */
+      }
+
+      @keyframes shimmer {
+        0% {
+          background-position: 200% center;
+        }
+        100% {
+          background-position: -200% center;
+        }
+      }
+      #special-heading {
+        font-size: 14px; /* Adjust the font size as needed */
+    }
+    #filterForm {
+      color: #bcbcbc;
+    }
+   </style>
+   {{end}}

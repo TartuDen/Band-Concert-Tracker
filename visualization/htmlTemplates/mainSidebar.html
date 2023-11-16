@@ -1,0 +1,36 @@
+{{define "Sidebar"}}
+<div class="col-md-3 sidebar">
+    <h2>Music Bands ({{ .LenArtists}})</h2>
+    <ul id="bandList">
+      {{ range .Artists }}
+      <li>
+        <a href="javascript:void(0);" class="fw-bold hover" data-toggle="collapse" data-target="#artist-{{.Id}}">
+          {{.Name}}
+        </a>
+        <div id="artist-{{.Id}}" class="collapse placeholder-wave">
+          <p>Members: {{.Members | join }}</p>
+          <p>Creation Date: {{.CreationDate}}</p>
+          <p>First Album: {{.FirstAlbum}}</p>
+          <p style="font-size: small;"><---Concert Schedule---></p>
+          {{ with .FinalRel }}
+          {{ if gt (len .) 0 }}
+          {{ range $key, $value := . }}
+          {{ $sortedDates :=  sortDates $value }}
+          {{ with $sortedDates }}
+          {{ range . }}
+          <p style=" font-size: small;">{{$key}} - &emsp;{{ . }}</p>
+          {{ end }}
+          {{ end }}
+          {{ end }}
+          {{ else }}
+          <p style=" font-size: small;">No data available.</p>
+          {{ end }}
+          {{ else }}
+          <p style=" font-size: small;">No data available.</p>
+          {{ end }}
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+{{end}}

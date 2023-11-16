@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 Server Error</title>
+    <style>
+       
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background: linear-gradient(#111, #333, #111);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #eee;
+            position: relative;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .message {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+            h1,
+            h2,
+            h3 {
+                margin: 0;
+                line-height: .8;
+            }
+
+            h2,
+            h3 {
+                font-weight: 400;
+                color: light-grey;
+                font-size: 1.5em;
+            }
+
+            h1 {
+                font-weight: 700;
+                color: light-grey;
+                font-size: 8em;
+            }
+
+            h2 {
+                margin: 30px 0;
+            }
+
+            h3 {
+                font-size: 2.5em;
+            }
+
+            h4 {
+                display: inline-block;
+                margin: 0 15px;
+            }
+
+            button {
+                background: transparent;
+                border: 2px solid darkgreen;
+                color: lightcoral;
+                padding: 5px 15px;
+                font-size: 1.25em;
+                transition: all 0.15s ease;
+                border-radius: 3px;
+            }
+
+            button:hover {
+                background: darkorange;
+                border: 2px solid darkcyan;
+                color: #111;
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>500</h1>
+        <h3>Server Error</h3>
+        <h2>It's not you, it's me.</h2>
+        <button id="goBackButton">Go Back</button>
+    </div>
+    <script>
+        document.getElementById("goBackButton").addEventListener("click", function() {
+            window.location.href = "/";
+        });
+    </script>
+</body>
+</html>
