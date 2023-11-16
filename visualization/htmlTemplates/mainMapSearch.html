@@ -1,11 +1,16 @@
 {{define "mapSearch"}}
-<form name="filterForm" id="filterForm" action="/" method="post">
-    <input type="text" id="query" name="query" placeholder="Search...">
-    <input type="submit" value="Search">
-  </form>
-  <form action="/map" name="mapLink" id="mapLink" method="post">
-      <a href="#" onclick="submitForm()">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyYuWsisYShM2GWOoUA4_LorS7w26GZk7zGxz7q3V0ThhZxaq08xRBcNOGwKmEpN7CnM4&usqp=CAU" style="width: 5%; height: auto;">
-      </a>
-  </form>
+<div class="row">
+  <div class="col-sm-6 col-md-6 col-lg-3">
+    <form name="filterForm" id="filterForm" action="/" method="post">
+      <input type="text" id="query" name="query" placeholder="Type band name here..." style="font-family: sans-serif;">
+      <input type="submit" value="Search" style="font-family: sans-serif;">
+    </form>
+  </div>
+  <div class="col-sm-6 col-md-6 col-lg-9">
+    <form action="/map" name="mapLink" id="mapLink" method="post">
+      <button class="image-button" name="submit" type="submit" value="filterForm" style="font-family: sans-serif;">Click to visit Map</button>
+    </form>
+  </div>
+</div>
+
 {{end}}

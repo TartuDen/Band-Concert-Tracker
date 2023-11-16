@@ -1,0 +1,75 @@
+{{define "bottomScript"}}
+<script>
+    $(document).ready(function () {
+        $('.collapse').on('show.bs.collapse', function () {
+            // Hide all other open collapse elements
+            $('.collapse.show').each(function () {
+                $(this).collapse('hide');
+            });
+        });
+    });
+
+    // JavaScript function to submit the form when the map image is clicked
+    // function submitForm() {
+    //     document.getElementById("mapLink").submit();
+    // }
+
+    // Get references to the range inputs and the value paragraphs
+    const minYearRange = document.getElementById('minYear');
+    const maxYearRange = document.getElementById('maxYear');
+    const minYearValue = document.getElementById('minYearValue');
+    const maxYearValue = document.getElementById('maxYearValue');
+
+    // Add event listeners to update the value paragraphs and enforce constraints
+    minYearRange.addEventListener('input', function () {
+        // Update the value paragraph for minYear
+        minYearValue.textContent = minYearRange.value;
+
+        // Ensure that minYearRange doesn't exceed maxYearRange
+        if (parseInt(minYearRange.value) > parseInt(maxYearRange.value)) {
+            maxYearRange.value = minYearRange.value;
+            maxYearValue.textContent = minYearRange.value;
+        }
+    });
+
+    maxYearRange.addEventListener('input', function () {
+        // Update the value paragraph for maxYear
+        maxYearValue.textContent = maxYearRange.value;
+
+        // Ensure that maxYearRange doesn't go lower than minYearRange
+        if (parseInt(maxYearRange.value) < parseInt(minYearRange.value)) {
+            minYearRange.value = maxYearRange.value;
+            minYearValue.textContent = maxYearRange.value;
+        }
+    });
+
+    // Get references to the range inputs and the value paragraphs for album years
+    const minYearAlbumRange = document.getElementById('minYearAlbum');
+    const maxYearAlbumRange = document.getElementById('maxYearAlbum');
+    const minYearAlbumValue = document.getElementById('minYearAlbumValue');
+    const maxYearAlbumValue = document.getElementById('maxYearAlbumValue');
+
+    // Add event listeners to update the value paragraphs and enforce constraints for album years
+    minYearAlbumRange.addEventListener('input', function () {
+        // Update the value paragraph for minYearAlbum
+        minYearAlbumValue.textContent = minYearAlbumRange.value;
+
+        // Ensure that minYearAlbumRange doesn't exceed maxYearAlbumRange
+        if (parseInt(minYearAlbumRange.value) > parseInt(maxYearAlbumRange.value)) {
+            maxYearAlbumRange.value = minYearAlbumRange.value;
+            maxYearAlbumValue.textContent = minYearAlbumRange.value;
+        }
+    });
+
+    maxYearAlbumRange.addEventListener('input', function () {
+        // Update the value paragraph for maxYearAlbum
+        maxYearAlbumValue.textContent = maxYearAlbumRange.value;
+
+        // Ensure that maxYearAlbumRange doesn't go lower than minYearAlbumRange
+        if (parseInt(maxYearAlbumRange.value) < parseInt(minYearAlbumRange.value)) {
+            minYearAlbumRange.value = maxYearAlbumRange.value;
+            minYearAlbumValue.textContent = maxYearAlbumRange.value;
+        }
+    });
+    </script>
+{{end}}

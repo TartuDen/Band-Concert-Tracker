@@ -12,83 +12,85 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ {{template "bottomScript"}}
  <script>
-    $(document).ready(function () {
-        $('.collapse').on('show.bs.collapse', function () {
-            // Hide all other open collapse elements
-            $('.collapse.show').each(function () {
-                $(this).collapse('hide');
-            });
-        });
-    });
-</script>
-<script>
-  // JavaScript function to submit the form when the map image is clicked
-  function submitForm() {
-      document.getElementById("mapLink").submit();
-  }
-</script>
-<script>
-// Get references to the range inputs and the value paragraphs
-const minYearRange = document.getElementById('minYear');
-const maxYearRange = document.getElementById('maxYear');
-const minYearValue = document.getElementById('minYearValue');
-const maxYearValue = document.getElementById('maxYearValue');
+  
+//     $(document).ready(function () {
+//         $('.collapse').on('show.bs.collapse', function () {
+//             // Hide all other open collapse elements
+//             $('.collapse.show').each(function () {
+//                 $(this).collapse('hide');
+//             });
+//         });
+//     });
+// </script>
+// <script>
+//   // JavaScript function to submit the form when the map image is clicked
+//   function submitForm() {
+//       document.getElementById("mapLink").submit();
+//   }
+// </script>
+// <script>
+// // Get references to the range inputs and the value paragraphs
+// const minYearRange = document.getElementById('minYear');
+// const maxYearRange = document.getElementById('maxYear');
+// const minYearValue = document.getElementById('minYearValue');
+// const maxYearValue = document.getElementById('maxYearValue');
 
 
-// Add event listeners to update the value paragraphs and enforce constraints
-minYearRange.addEventListener('input', function () {
-  // Update the value paragraph for minYear
-  minYearValue.textContent = minYearRange.value;
+// // Add event listeners to update the value paragraphs and enforce constraints
+// minYearRange.addEventListener('input', function () {
+//   // Update the value paragraph for minYear
+//   minYearValue.textContent = minYearRange.value;
 
-  // Ensure that minYearRange doesn't exceed maxYearRange
-  if (parseInt(minYearRange.value) > parseInt(maxYearRange.value)) {
-    maxYearRange.value = minYearRange.value;
-    maxYearValue.textContent = minYearRange.value;
-  }
-});
+//   // Ensure that minYearRange doesn't exceed maxYearRange
+//   if (parseInt(minYearRange.value) > parseInt(maxYearRange.value)) {
+//     maxYearRange.value = minYearRange.value;
+//     maxYearValue.textContent = minYearRange.value;
+//   }
+// });
 
-maxYearRange.addEventListener('input', function () {
-  // Update the value paragraph for maxYear
-  maxYearValue.textContent = maxYearRange.value;
+// maxYearRange.addEventListener('input', function () {
+//   // Update the value paragraph for maxYear
+//   maxYearValue.textContent = maxYearRange.value;
 
-  // Ensure that maxYearRange doesn't go lower than minYearRange
-  if (parseInt(maxYearRange.value) < parseInt(minYearRange.value)) {
-    minYearRange.value = maxYearRange.value;
-    minYearValue.textContent = maxYearRange.value;
-  }
-});
-</script>
-<script>
-  // Get references to the range inputs and the value paragraphs
-  const minYearAlbumRange = document.getElementById('minYearAlbum');
-  const maxYearAlbumRange = document.getElementById('maxYearAlbum');
-  const minYearAlbumValue = document.getElementById('minYearAlbumValue');
-  const maxYearAlbumValue = document.getElementById('maxYearAlbumValue');
+//   // Ensure that maxYearRange doesn't go lower than minYearRange
+//   if (parseInt(maxYearRange.value) < parseInt(minYearRange.value)) {
+//     minYearRange.value = maxYearRange.value;
+//     minYearValue.textContent = maxYearRange.value;
+//   }
+// });
+// </script>
+// <script>
+//   // Get references to the range inputs and the value paragraphs
+//   const minYearAlbumRange = document.getElementById('minYearAlbum');
+//   const maxYearAlbumRange = document.getElementById('maxYearAlbum');
+//   const minYearAlbumValue = document.getElementById('minYearAlbumValue');
+//   const maxYearAlbumValue = document.getElementById('maxYearAlbumValue');
   
   
-  // Add event listeners to update the value paragraphs and enforce constraints
-  minYearAlbumRange.addEventListener('input', function () {
-    // Update the value paragraph for minYear
-    minYearAlbumValue.textContent = minYearAlbumRange.value;
+//   // Add event listeners to update the value paragraphs and enforce constraints
+//   minYearAlbumRange.addEventListener('input', function () {
+//     // Update the value paragraph for minYear
+//     minYearAlbumValue.textContent = minYearAlbumRange.value;
   
-    // Ensure that minYearAlbumRange doesn't exceed maxYearAlbumRange
-    if (parseInt(minYearAlbumRange.value) > parseInt(maxYearAlbumRange.value)) {
-      maxYearAlbumRange.value = minYearAlbumRange.value;
-      maxYearAlbumValue.textContent = minYearAlbumRange.value;
-    }
-  });
+//     // Ensure that minYearAlbumRange doesn't exceed maxYearAlbumRange
+//     if (parseInt(minYearAlbumRange.value) > parseInt(maxYearAlbumRange.value)) {
+//       maxYearAlbumRange.value = minYearAlbumRange.value;
+//       maxYearAlbumValue.textContent = minYearAlbumRange.value;
+//     }
+//   });
   
-  maxYearAlbumRange.addEventListener('input', function () {
-    // Update the value paragraph for maxYear
-    maxYearAlbumValue.textContent = maxYearAlbumRange.value;
+//   maxYearAlbumRange.addEventListener('input', function () {
+//     // Update the value paragraph for maxYear
+//     maxYearAlbumValue.textContent = maxYearAlbumRange.value;
   
-    // Ensure that maxYearAlbumRange doesn't go lower than minYearAlbumRange
-    if (parseInt(maxYearAlbumRange.value) < parseInt(minYearAlbumRange.value)) {
-      minYearAlbumRange.value = maxYearAlbumRange.value;
-      minYearAlbumValue.textContent = maxYearAlbumRange.value;
-    }
-  });
+//     // Ensure that maxYearAlbumRange doesn't go lower than minYearAlbumRange
+//     if (parseInt(maxYearAlbumRange.value) < parseInt(minYearAlbumRange.value)) {
+//       minYearAlbumRange.value = maxYearAlbumRange.value;
+//       minYearAlbumValue.textContent = maxYearAlbumRange.value;
+//     }
+//   });
   </script>
 </body>
 </html>

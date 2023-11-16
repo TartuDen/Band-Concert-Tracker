@@ -2,7 +2,7 @@
 
 ## Authors
 
-- [Denys Verves](https://01.kood.tech/git/dverves)
+- [Denys Verves](https://github.com/TartuDen)
 - [Yurii Panasiuk](https://01.kood.tech/git/ypanasiu)
 
 ## To run
@@ -14,30 +14,39 @@ go run .
 ```bash
 http://localhost:8080/
 ```
-### Audit
-- [Audit Link](https://github.com/01-edu/public/tree/master/subjects/groupie-tracker/geolocalization/audit)
-
 
 ### Objectives
 
-You must follow the same principles as the first subject.
+Groupie Trackers consists on receiving a given API and manipulate the data contained in it, in order to create a site, displaying the information.
 
-Groupie Tracker Geolocalization consists on mapping the different concerts locations of a certain artist/band given by the Client.
+It will be given an API, that consists in four parts:
 
-You must use a process of converting addresses (ex: Germany Mainz) into geographic coordinates (ex: 49,59380 8,15052) which you must use to place markers for the concerts locations of a certain artist/band on a map.
+The first one, artists, containing information about some bands and artists like their name(s), image, in which year they began their activity, the date of their first album and the members.
 
-You are free to use the Map API you found more appropriate.
+The second one, locations, consists in their last and/or upcoming concert locations.
+
+The third one, dates, consists in their last and/or upcoming concert dates.
+
+And the last one, relation, does the link between all the other parts, artists, dates and locations.
+
+### The Filters feature:
+Consists on letting the user filter the artists/bands that will be shown.
+
+### The Geolocalization feature:
+Consists on mapping the different concerts locations of a certain artist/band given by the Client.
+A process of converting addresses (ex: Germany Mainz) into geographic coordinates (ex: 49,59380 8,15052) which we use to place markers for the concerts locations of a certain artist/band on a map is used.
+Google API map was used for this project.
+
+
 
 ### Instructions
 
-The backend must be written in Go
-You must handle website errors
-The code must respect the good practices
-It is recommended to have test files for unit testing.
+The backend is written in Go.
 
 ### Usage
 Here is a simple example of the process of giving an address and returning a marker to the location.
-This project will help you learn about :
+
+This project helped us to learn about :
 
 Manipulation and storage of data
 HTML

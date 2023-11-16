@@ -1,13 +1,5 @@
 {{define "Template"}}
 <style>
-    /* Custom CSS class for background image */
-    .bg-image {
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      height: 100vh;
-      width: 100wH;
-    }
-
     /* Customize your CSS here */
     body {
           background-size: 100% 100%;
@@ -53,7 +45,7 @@
       .shimmer-text {
         font-size: 36px;
         text-align: center;
-        background-image: linear-gradient(to right, rgb(32, 30, 31), rgb(136, 37, 37), rgb(22, 20, 21)); /* Define the shimmering colors here */
+        background-image: linear-gradient(to right, rgb(32, 30, 31), rgb(251, 249, 249), rgb(22, 20, 21)); /* Define the shimmering colors here */
         background-size: 200% auto;
         color: transparent;
         background-clip: text;
@@ -75,5 +67,33 @@
     #filterForm {
       color: #bcbcbc;
     }
+    .image-button {
+      background-image: url("data:image/png;base64,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");
+      background-size: auto 100%; /* Adjust as needed */
+      background-repeat: no-repeat;
+      background-position: right; /* Center the image */
+      width: 180px; /* Set the width and height as needed */
+      height: 30px;
+      border: none; /* Remove default button border */
+      cursor: pointer; /* Add a pointer cursor on hover */
+    }
+    /* Normal state of the image */
+    .image-hover {
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    /* Hover state of the image */
+    .image-hover:hover {
+      transform: scale(1.1); /* Scale up the image by 10% on hover */
+      /* opacity: 0.8; Reduce opacity on hover */
+    }
+
+    .visit-youtube {
+      background-image: url('data:image/png;base64,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');
+      background-repeat: no-repeat;
+      background-size: 20px 20px; /* Adjust the size as needed */
+      padding-left: 0px; /* Add some padding to create space between the text and the icon */
+    }
+
    </style>
    {{end}}
