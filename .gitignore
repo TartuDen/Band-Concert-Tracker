@@ -1,0 +1,25 @@
+# Ignore binary files
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore dependency directories
+/vendor/
+/go.sum
+
+# Ignore build files and directories
+/build/
+/dist/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore config or sensitive information (if any)
+/config.yaml
+/secrets.json
+
+# Ignore editor-specific files
+.vscode/
+.idea/

@@ -166,12 +166,6 @@ func Test_FilterFunc(t *testing.T) {
 	}
 	filteredResult, _, _ := FilterFunc(testCases[0].dataForF, artistsData)
 
-	// if len(filteredResult) != len(testCases[0].artistsNameExpected) {
-	// 	t.Errorf("T1.Expected %v, but got %v for input %v", len(testCases[0].artistsNameExpected), len(filteredResult), (testCases[0].artistsNameExpected))
-	// }
-	// if artistsCount != len(testCases[0].artistsNameExpected) {
-	// 	t.Errorf("T2.Expected %v, but got %v for input %v", len(testCases[0].artistsNameExpected), artistsCount, (testCases[0].artistsNameExpected))
-	// }
 	for idx, elem := range filteredResult {
 		if elem.Name != testCases[0].artistsNameExpected[idx] {
 			t.Errorf("T3.Expected %v, but got %v for input %v", testCases[0].artistsNameExpected[idx], elem.Name, testCases[0].artistsNameExpected)
