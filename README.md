@@ -3,7 +3,7 @@
 ## Authors
 
 - [Denys Verves](https://github.com/TartuDen)
-- [Yurii Panasiuk](https://01.kood.tech/git/ypanasiu)
+- [Yurii Panasiuk](https://github.com/pomog)
 
 ## To run
 
@@ -41,6 +41,7 @@ A process of converting addresses (ex: Germany Mainz) into geographic coordinate
 Google API map was used for this project.
 ![Alt text](readmeImgs/image-1.png) - selected locations of concerts
 
+# NB! It is possible that google key for API is not valid anymore! #
 
 ### Usage
 This project helped us to learn about:
