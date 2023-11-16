@@ -31,12 +31,12 @@ And the last one, relation, does the link between all the other parts, artists, 
 
 ### The Filters feature:
 Consists on letting the user filter the artists/bands that will be shown.
-
+![Alt text](image.png) - selecting filters
 ### The Geolocalization feature:
 Consists on mapping the different concerts locations of a certain artist/band given by the Client.
 A process of converting addresses (ex: Germany Mainz) into geographic coordinates (ex: 49,59380 8,15052) which we use to place markers for the concerts locations of a certain artist/band on a map is used.
 Google API map was used for this project.
-
+![Alt text](image-1.png) - selected locations of concerts
 
 
 ### Instructions
