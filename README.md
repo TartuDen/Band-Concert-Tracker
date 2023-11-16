@@ -28,10 +28,13 @@ The second one, locations, consists in their last and/or upcoming concert locati
 The third one, dates, consists in their last and/or upcoming concert dates.
 
 And the last one, relation, does the link between all the other parts, artists, dates and locations.
+![Alt text](image-2.png)
 
 ### The Filters feature:
 Consists on letting the user filter the artists/bands that will be shown.
+The visual effects of fitlers are done using JS on Client side and the logic is done on Server side using Golang.
 ![Alt text](image.png) - selecting filters
+
 ### The Geolocalization feature:
 Consists on mapping the different concerts locations of a certain artist/band given by the Client.
 A process of converting addresses (ex: Germany Mainz) into geographic coordinates (ex: 49,59380 8,15052) which we use to place markers for the concerts locations of a certain artist/band on a map is used.
