@@ -5,6 +5,9 @@ import (
 	"groupie-tracker/get_info"
 )
 
+// Set up your key here:
+const apiKey = "AIzaSyAswKfta2ldXpPMe6QISZ3wwpVz4RWH4hM"
+
 type DataForFilter struct {
 	MinYear     int
 	MaxYear     int

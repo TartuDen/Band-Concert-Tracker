@@ -52,7 +52,6 @@ type GeocodingResponseAdress struct {
 
 // getting actual coordinates from addresses using Map API
 func reverseGeocode(address string) (float64, float64) {
-	apiKey := "AIzaSyAswKfta2ldXpPMe6QISZ3wwpVz4RWH4hM"
 	url := "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=" + apiKey
 
 	res, err := http.Get(url)

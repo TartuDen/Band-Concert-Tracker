@@ -41,7 +41,7 @@ A process of converting addresses (ex: Germany Mainz) into geographic coordinate
 Google API map was used for this project.
 ![Alt text](readmeImgs/image-1.png) - selected locations of concerts
 
-# NB! It is possible that google key for API is not valid anymore! #
+# NB! Set API key in: "visualization/structs.go" and "visualization/mapTempl/map.html" #
 
 ### Usage
 This project helped us to learn about:
