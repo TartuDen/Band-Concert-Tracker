@@ -17,26 +17,26 @@ http://localhost:8080/
 
 ### Objectives
 
-Groupie Trackers consists on receiving a given API and manipulate the data contained in it, in order to create a site, displaying the information.
+Groupie Trackers consists of receiving a given API and manipulating the data contained in it, in order to create a site, displaying the information.
 
-It will be given an API, that consists in four parts:
+It will be given an API, that consists of four parts:
 
-The first one, artists, containing information about some bands and artists like their name(s), image, in which year they began their activity, the date of their first album and the members.
+The first one, artists, contains information about some bands and artists like their name(s), image, in which year they began their activity, the date of their first album and the members.
 
-The second one, locations, consists in their last and/or upcoming concert locations.
+The second one, locations, consists of their past and/or upcoming concert locations.
 
-The third one, dates, consists in their last and/or upcoming concert dates.
+The third one, dates, consists of their last and/or upcoming concert dates.
 
-And the last one, relation, does the link between all the other parts, artists, dates and locations.
+And the last one, relation, links all the other parts, artists, dates, and locations.
 ![Alt text](readmeImgs/image-2.png)
 
 ### The Filters feature:
-Consists on letting the user filter the artists/bands that will be shown.
-The visual effects of fitlers are done using JS on Client side and the logic is done on Server side using Golang.
+Consists of letting the user filter the artists/bands that will be shown.
+The visual effects of filters are done using JS on the Client side and the logic on the Server side using Golang.
 ![Alt text](readmeImgs/image.png) - selecting filters
 
 ### The Geolocalization feature:
-Consists on mapping the different concerts locations of a certain artist/band given by the Client.
+Consists of mapping the different concerts locations of a certain artist/band given by the Client.
 A process of converting addresses (ex: Germany Mainz) into geographic coordinates (ex: 49,59380 8,15052) which we use to place markers for the concerts locations of a certain artist/band on a map is used.
 Google API map was used for this project.
 ![Alt text](readmeImgs/image-1.png) - selected locations of concerts
@@ -54,4 +54,7 @@ Event creation and display
 JSON files and format
 
 ### Testing
-The project has unit tests file that tests some routine functions with coverage about 30%.
+The project has a unit tests file that tests some routine functions with coverage of about 30%.
+
+### Unsolved Issues
+1. SearchBar needs to be implemented
