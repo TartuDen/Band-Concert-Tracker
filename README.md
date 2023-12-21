@@ -17,7 +17,7 @@ http://localhost:8080/
 
 ### Objectives
 
-Groupie Trackers consists of receiving a given API and manipulating the data contained in it, in order to create a site, displaying the information.
+Trackers consists of receiving a given API and manipulating the data contained in it, in order to create a site, displaying the information.
 
 It will be given an API, that consists of four parts:
 
