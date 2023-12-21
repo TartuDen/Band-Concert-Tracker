@@ -1,4 +1,4 @@
-## groupie-tracker-geolocalization
+## Band Concert Tracker
 
 ## Authors
 
